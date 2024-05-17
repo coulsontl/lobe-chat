@@ -112,7 +112,8 @@ export const createCommonSlice: StateCreator<
       focusThrottleInterval: 1000 * 60 * 30,
       onSuccess: (data: string) => {
         if (gt(data, CURRENT_VERSION))
-          set({ hasNewVersion: true, latestVersion: data }, false, n('checkLatestVersion'));
+          console.log(`hasNewVersion: true, latestVersion: ${data}`)
+          // set({ hasNewVersion: true, latestVersion: data }, false, n('checkLatestVersion'));
       },
     }),
   useCheckTrace: (shouldFetch) =>
